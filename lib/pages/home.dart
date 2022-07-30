@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:medical_app/pages/widgets/home/headers.dart';
 import 'package:medical_app/pages/widgets/home/search.dart';
 import 'package:medical_app/pages/widgets/home/topbar.dart';
 
@@ -24,7 +25,10 @@ class _HomePageState extends State<HomePage> {
         SearchBar(),
         SizedBox(height: 30),
 
-        // My Appointments
+        // Appointment Header
+        HeaderRow(),
+
+        // Appointmnet Container
       ]),
     );
   }
