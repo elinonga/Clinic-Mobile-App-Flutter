@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:medical_app/pages/widgets/home/appointment.dart';
+import 'package:medical_app/pages/widgets/home/clinic_info.dart';
 import 'package:medical_app/pages/widgets/home/headers.dart';
 import 'package:medical_app/pages/widgets/home/search.dart';
 import 'package:medical_app/pages/widgets/home/small_container.dart';
@@ -42,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         const SizedBox(height: 15),
 
         // Horizontal Sliders Doctors near me
-        Container(
+        SizedBox(
           height: 50,
           child: ListView(
             scrollDirection: Axis.horizontal,
@@ -79,6 +80,62 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
+        const SizedBox(height: 15),
+
+        // Clinic Containers Sliders
+        SizedBox(
+          height: 190,
+          width: double.infinity,
+          child: ListView(scrollDirection: Axis.horizontal, children: const [
+            ClinicInfo(
+              picha: "assets/images/clinics/doc1.jpeg",
+              name: "Elinonga Clinic",
+              schedule: "08:00 AM - 6:00 PM",
+              address: "1150 Kinondoni Street, DSM",
+              upana: 285,
+            ),
+            ClinicInfo(
+              picha: "assets/images/clinics/doc5.jpeg",
+              name: "Mezza Clinic",
+              schedule: "09:00 AM - 7:00 PM",
+              address: "345 Ilala Street, Mbeya",
+              upana: 290,
+            ),
+            ClinicInfo(
+              picha: "assets/images/clinics/doc2.jpeg",
+              name: "David Clinic",
+              schedule: "10:00 AM - 8:00 PM",
+              address: "980 Temeke Street, Kagera",
+              upana: 285,
+            ),
+            ClinicInfo(
+              picha: "assets/images/clinics/doc3.jpeg",
+              name: "Kunonga Clinic",
+              schedule: "08:00 AM - 5:00 PM",
+              address: "657 Ubungo Street, Ulaya",
+              upana: 340,
+            ),
+            ClinicInfo(
+              picha: "assets/images/clinics/doc4.png",
+              name: "Nyekanyeka Clinic",
+              schedule: "07:30 AM - 11:30 PM",
+              address: "885 Soweto Street, Sauzi",
+              upana: 335,
+            ),
+
+            // Space at the end of the last container
+            SizedBox(
+              width: 15,
+            ),
+
+            //
+          ]),
+        ),
+        const SizedBox(
+          height: 30,
+        ),
+
+        // To be continued
       ]),
     );
   }
