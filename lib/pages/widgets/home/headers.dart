@@ -4,7 +4,10 @@ import 'package:hexcolor/hexcolor.dart';
 class HeaderRow extends StatelessWidget {
   const HeaderRow({
     Key? key,
+    required this.header_name,
   }) : super(key: key);
+
+  final String header_name;
 
   @override
   Widget build(BuildContext context) {
@@ -12,7 +15,7 @@ class HeaderRow extends StatelessWidget {
       margin: const EdgeInsets.only(left: 15, right: 15),
       child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
         Text(
-          "My Appointments",
+          header_name,
           style: TextStyle(
               color: HexColor("005bac"),
               fontWeight: FontWeight.bold,
