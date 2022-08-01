@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:medical_app/main_screen.dart';
 import 'package:medical_app/pages/home.dart';
 
 void main() {
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.teal,
       ),
-      home: const HomePage(),
+      home: const MainScreen(),
     );
   }
 }
